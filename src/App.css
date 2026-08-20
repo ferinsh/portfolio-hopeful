@@ -175,6 +175,11 @@ h2 span {
 
   background: var(--surface);
 }
+#profile_image {
+  max-width: 100%;
+  border-radius: 50%;
+  /* object-fit: contain; */
+}
 
 .image-placeholder,
 .about-placeholder {
@@ -426,6 +431,8 @@ footer strong {
     width: 280px;
     height: 280px;
   }
+
+  
 
   .expertise-grid {
     grid-template-columns: 1fr;

@@ -1,5 +1,6 @@
 import "./App.css";
 import MyIMG from "./assets/me.jpeg"
+import ProfileIMG from "./assets/profile.png"
 
 function Navbar() {
   return (
@@ -27,7 +28,7 @@ function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <p className="eyebrow">SOFTWARE DEVELOPER</p>
+        <p className="eyebrow">DEVELOPER</p>
 
         <h1>
           Hi, I'm <span>Ferin</span>
@@ -56,10 +57,11 @@ function Hero() {
 
       <div className="hero-image">
         <div className="image-circle">
-          <div className="image-placeholder">
-            {/* YOUR PHOTO */}
-            {/* <img src={MyIMG} alt="" /> */}
-          </div>
+          <img id="profile_image" src={ProfileIMG} alt="Profile Image" />
+          {/* <div className="image-placeholder">
+            YOUR PHOTO
+            <img src={MyIMG} alt="" />
+          </div> */}
         </div>
       </div>
     </section>
@@ -204,6 +206,9 @@ function Projects() {
       description:
         " stock portfolio monitoring platform using React, Django REST Framework, PostgreSQL, Docker, and the Finnhub API, featuring JWT authentication, portfolio management, and realtime stock price updates.",
       technologies: "React • Django • Finnhub API • PostgreSQL • JWT authentication",
+      github: "https://github.com/ferinsh/Favorite-stocks-watcher",
+      livedemo: "#",
+      image: ""
     },
     {
       number: "02",
@@ -211,13 +216,19 @@ function Projects() {
       description:
         "A machine learning project for predicting household electricity consumption using engineered time-series features.",
       technologies: "Python • XGBoost • Pandas • ML",
+      github: "https://github.com/ferinsh/sfRP",
+      livedemo: "#",
+      image: ""
     },
     {
       number: "03",
       title: "Coming Soon",
       description:
-        "An upcoming project showcasing another full-stack application.",
-      technologies: "React • Node.js • Database",
+        "Adding more projects to the portfolio.",
+      technologies: "",
+      github: "#",
+      livedemo: "#",
+      image: ""
     },
   ];
 
@@ -246,14 +257,19 @@ function Projects() {
               <small>{project.technologies}</small>
 
               <div className="project-links">
-                <a href="#">Live Demo ↗</a>
-                <a href="#">GitHub ↗</a>
+                {project.livedemo !== "#" && <a href={project.livedemo} target="_blank">Live Demo ↗</a>}
+                {project.github !== "#" && <a href={project.github} target="_blank">GitHub ↗</a>}
+                
               </div>
             </div>
 
+            {
+            project.image && 
             <div className="project-preview">
               PROJECT
             </div>
+            }
+            
           </article>
         ))}
       </div>
