@@ -1,0 +1,287 @@
+.contact-page {
+  background: #0a0a0a;
+  color: #f5f5f5;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.contact-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 40px 100px;
+
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 100px;
+
+  border-bottom: 1px solid #222;
+}
+
+.contact-heading h1 {
+  margin: 20px 0 35px;
+
+  font-size: clamp(55px, 7vw, 100px);
+  line-height: 0.95;
+  letter-spacing: -4px;
+}
+
+.contact-heading h1 span {
+  color: #ff5b24;
+}
+
+.contact-intro {
+  max-width: 540px;
+
+  color: #888;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 45px;
+}
+
+.contact-detail {
+  border-top: 1px solid #292929;
+  padding-top: 18px;
+}
+
+.contact-detail span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #ff5b24;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.contact-detail a,
+.contact-detail p {
+  margin: 0;
+
+  color: #eee;
+
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.contact-detail a {
+  transition: color 0.2s ease;
+}
+
+.contact-detail a:hover {
+  color: #ff5b24;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 25px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 40px;
+
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 100px;
+}
+
+.form-heading h2 {
+  margin-top: 20px;
+
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.form-heading h2 span {
+  color: #ff5b24;
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group label {
+  color: #ff5b24;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 17px 0;
+
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid #333;
+
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #555;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: #ff5b24;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.contact-submit {
+  align-self: flex-start;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 16px 25px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #ff5b24;
+  color: #080808;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-submit span {
+  font-size: 16px;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+  background: #ff6d3b;
+}
+
+
+/* =========================
+   BOTTOM CTA
+========================= */
+
+.contact-bottom {
+  padding: 100px 40px 140px;
+
+  text-align: center;
+
+  background: #0d0d0d;
+}
+
+.contact-bottom h2 {
+  margin-top: 20px;
+
+  font-size: clamp(40px, 6vw, 75px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.contact-bottom h2 span {
+  color: #ff5b24;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .contact-hero {
+    grid-template-columns: 1fr;
+    gap: 70px;
+
+    padding: 100px 25px 80px;
+  }
+
+  .contact-heading h1 {
+    font-size: 55px;
+    letter-spacing: -2px;
+  }
+
+  .contact-form-section {
+    grid-template-columns: 1fr;
+    gap: 60px;
+
+    padding: 80px 25px;
+  }
+
+  .form-heading h2 {
+    font-size: 40px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-bottom {
+    padding: 80px 25px 100px;
+  }
+}
