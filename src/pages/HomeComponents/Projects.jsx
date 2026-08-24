@@ -22,6 +22,16 @@ export default function Projects() {
     },
     {
       number: "03",
+      title: "Journalist Outreach Copilot",
+      description:
+        "AI-powered PR research tool that matches campaigns with relevant journalists using deterministic candidate scoring and AI-ready matching.",
+      technologies: "Python • Streamlit • Pandas • Scikit-learn • NLP • AI/LLM",
+      github: "https://github.com/ferinsh/journalist-outreach-copilot",
+      livedemo: "https://joc-frontend.onrender.com/",
+      image: ""
+    },
+    {
+      number: "04",
       title: "Coming Soon",
       description:
         "Adding more projects to the portfolio.",
